@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <div class="toDoApp">
+      <header><h2 class="toDoApp-header">To-Do List</h2></header>
+      <main>
+        <div class="toDoApp-inputs">
+          <div>
+            <label for="task-input">Task: </label>
+            <input id="task-input" type="text" placeholder="Read a book" />
+          </div>
+          <br />
+          <div>
+            <label for="assignee-input">Assignee: </label>
+            <input id="assignee-input" type="text" placeholder="John Smith" />
+            <button id="addBtn">Add</button>
+          </div>
+        </div>
+        <br />
+        <div class="toDoApp-searchbar">
+          <input type="search" id="search" placeholder="Search" />
+        </div>
+        <div class="tasksList">
+          <ul id="toDoApp-tasksList">
+            <!--add elements-->
+          </ul>
+        </div>
+      </main>
+      <footer>
+        <div id="pendingTasks"></div>
+      </footer>
+    </div>
+  </body>
+</html>
