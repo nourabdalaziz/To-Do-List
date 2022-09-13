@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Beau+Rivage&family=Bevan&family=Gruppo&family=Kanit&family=League+Gothic&family=Raleway:ital,wght@1,100&family=Road+Rage&family=Send+Flowers&family=Square+Peg&display=swap");
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  font-family: "Roboto", sans-serif;
+}
+.toDoApp {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 2rem;
+}
+input[type="search"] {
+  width: 100%;
+  margin-top: 1.8rem;
+}
+
+.doneTask {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.task {
+  color: black;
+  font-size: 0.9rem;
+}
+
+.tasksList-element {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+.buttons {
+  margin-left: auto;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* background: rgba(0, 0, 0, 0.8); */
+  z-index: 2;
+}
+
+.confirm-box {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  top: 50%;
+  left: 40%;
+  text-align: center;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+  cursor: pointer;
+}
+
+.confirmBtns{
+  display: flex;
+  justify-content:flex-end ;
+  align-items: center;
+  padding-right: 0.7rem;
+}
