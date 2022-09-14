@@ -11,15 +11,16 @@ window.addEventListener("load", () => {
     ? JSON.parse(localStorage.getItem("tasks"))
     : [];
 
+  renderTasks();
+
   function deleteTask(index) {
     showConfirmBox();
-    const cancelBtn = document.getElementById("cancelDeleting");
 
+    const cancelBtn = document.getElementById("cancelDeleting");
     const confDeleteBtn = document.getElementById("confirmDeleting");
 
-    cancelBtn.addEventListener("click", () => {
-      closeConfirmBox();
-    });
+    cancelBtn.addEventListener("click", closeConfirmBox);
+
     confDeleteBtn.addEventListener("click", () => {
       tasksArr.splice(index, 1);
       localStorage.setItem("tasks", JSON.stringify(tasksArr));
@@ -71,7 +72,6 @@ window.addEventListener("load", () => {
     });
     footer.innerHTML = `You have ${tasksArr.length} pending tasks. `;
   }
-  renderTasks();
 
   btn.addEventListener("click", addTask);
 
@@ -87,10 +87,13 @@ window.addEventListener("load", () => {
       tasksListElement.innerHTML = "";
       res.forEach((element, index) => {
         const li = document.createElement("li");
+        li.className = "tasksList-element";
         li.innerHTML = `
-        <div>${element.task}</div>
-        <div>${element.assignee}</div>
-        <button class="delete";>delete</button>
+        <div class="task">${element.task} <br> ${element.assignee}</div>
+        <div class="buttons">
+          <button class="delete";>Delete</button>
+          <button class="done";>Done</button>
+        </div>
       `;
 
         tasksListElement.append(li);
